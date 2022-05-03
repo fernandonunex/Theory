@@ -1,10 +1,11 @@
 class Restaurant():
     """A simple attempt to model a dog"""
 
-    def __init__(self, restaurant_name, cuisine_type):
+    def __init__(self, restaurant_name, cuisine_type, number_served=0):
         """Initialize restaurant_name and cuisine_type"""
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
+        self.number_served = number_served
 
     def describe_restaurant(self):
         """Just print the attributes"""
@@ -15,6 +16,14 @@ class Restaurant():
         """Prints that the restaurant is open"""
         print("The restaurant is open!!!")
 
+    def set_number_served(self, number_served):
+        self.number_served = number_served
+
+    def increment_number_served(self, increment_number):
+        if increment_number > 0:
+            self.number_served += increment_number
+        else:
+            print("Please enter a valid number")
 
 if __name__ == "__main__":
     my_restaurant = Restaurant("El huevon", "Mexican")
@@ -24,7 +33,19 @@ if __name__ == "__main__":
     # print(my_restaurant.restaurant_name)
     # print(my_restaurant.cuisine_type)
 
-    my_restaurant.describe_restaurant()
-    your_restaurant.describe_restaurant()
-    her_restaurant.describe_restaurant()
+    # my_restaurant.describe_restaurant()
+    # your_restaurant.describe_restaurant()
+    # her_restaurant.describe_restaurant()
+
+    # Exercise 9.3
+    print(my_restaurant.number_served)
+    my_restaurant.number_served = 15
+    print(my_restaurant.number_served)
+    my_restaurant.set_number_served(20)
+    print(my_restaurant.number_served)
+    my_restaurant.increment_number_served(10)
+    print(my_restaurant.number_served)
+    my_restaurant.increment_number_served(10)
+    print(my_restaurant.number_served)
+    my_restaurant.increment_number_served(-15)
 
