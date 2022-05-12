@@ -25,8 +25,24 @@ class Restaurant():
         else:
             print("Please enter a valid number")
 
+
 class IceCreamStand(Restaurant):
     """A class that inherits form Restaurant"""
+
     def __init__(self, restaurant_name, flavors, number_served=0):
         super().__init__(restaurant_name, number_served)
         self.flavors = flavors
+
+    def display_flavors(self):
+        """A function that display the flavors"""
+        print("The flavors are:")
+        for flavor in self.flavors:
+            print(f"-{flavor}")
+
+
+if __name__ == "__main__":
+    my_iceream_stand = IceCreamStand(
+        "The ICE", ['vainilla', 'chocolate', 'napolitano', 'cookies'])
+    
+    my_iceream_stand.display_flavors()
+
