@@ -1,0 +1,5 @@
+In Python you can make games
+In Python you can make websites
+In Python you can make apps
+In Python you can make AI
+In Python you can make Data Viz
